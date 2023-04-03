@@ -5,14 +5,18 @@ export default function Date(props) {
     <li className="inline-block bg-white rounded-lg shadow-md">
       <div
         className={`${
-          props.day === "SUN" ? "bg-red-400" : props.day === "SAT" ? "bg-orange-400" : "bg-blue-400"
-        } rounded-t-xl px-2 py-1 text-xl text-white`}
+          props.day === "SUN"
+            ? "bg-red-400"
+            : props.day === "SAT"
+            ? "bg-orange-400"
+            : "bg-blue-400"
+        } rounded-t-lg px-2 py-1 text-sm text-white`}
       >
         {props.date}
       </div>
-      <ul className="p-2 text-lg h-20">
+      <ul className="p-2 text-xs min-h-[80px] font-semibold">
         {props.todos.map((v, i) => {
-          return <li>{v}</li>;
+          return <li className="truncate">{v}</li>;
         })}
       </ul>
     </li>
