@@ -8,7 +8,7 @@ export default function Calender() {
         <div className='pb-8 text-4xl font-bold'>2023, 04</div>
        {
         calendarData.map((v,i) => {
-          return <Date />
+          return <Date key={i} date={v.date} day={v.day} todos={v.todos}/>
         })
        }
     </div>
